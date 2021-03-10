@@ -22,7 +22,6 @@ public class getMoney : MonoBehaviour
     void Update()
     {
         txt.text = "Survive Round 25 To Win" + "\nQ Key for Railgun " + "\nW Key for Missile Launcher" + "\nMoney: " + money + "\t Lives: " + (lives/2) + "\nRAILGUN PRICE: " + chooseTower.Instance.railgunCost + "\nMISSILE PRICE: " + chooseTower.Instance.missileLauncherCost + "\nROUND: " + spawnMore.Instance.waveCounter + "\nENEMY HEALTH: " + Enemy.Instance.maxHealth;
-
     }
 
 

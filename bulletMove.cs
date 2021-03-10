@@ -13,7 +13,7 @@ public class bulletMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.AddForce(transform.forward * force);
+        rb.AddForce(transform.forward * force); //shoot bullet at target
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class bulletMove : MonoBehaviour
     {
         timer -= Time.deltaTime;
 
-        if (pierce <= 0 || timer <= 0)
+        if (timer <= 0)
         {
             Destroy(this.gameObject);
         }
@@ -32,7 +32,10 @@ public class bulletMove : MonoBehaviour
         if(col.gameObject.tag == "enemyCube")
         {
             pierce--;
-
+            if(pierce <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
