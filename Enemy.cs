@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,8 +27,8 @@ public class Enemy : MonoBehaviour
     {
         Instance = this;
 
-        speed += extraSpeed * spawnMore.Instance.waveCounter / 5;
-        maxHealth += spawnMore.Instance.waveCounter / 3;
+        speed += extraSpeed * spawnMore.Instance.waveCounter / 3;
+        maxHealth += spawnMore.Instance.waveCounter / 2;
         Debug.Log("spawnMore.Instance.waveCounter: " + spawnMore.Instance.waveCounter + "\tenemy health: " + maxHealth + "\tspeed: " + speed);
 
         health = maxHealth;
@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
 
         if(col.gameObject.tag == "missile")
         {
-            health -= 2;
+            health -= 4;
         }
 
         if(col.gameObject.tag == "endCube")
